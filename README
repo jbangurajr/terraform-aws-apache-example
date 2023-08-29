@@ -25,3 +25,11 @@ output "public_ip" {
   value = module.apache.public_ip
 }
 ```
+
+
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:jbangurajr/terraform-aws-apache-example.git
+git push -u origin main
