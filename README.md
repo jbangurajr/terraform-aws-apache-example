@@ -15,7 +15,7 @@ provider "aws" {
 module "apache" {
   source          = ".//terraform-aws-apache-example"
   vpc_id          = "vpc-0000000000-example"
-  my_ip_with_cidr = "MY_OWN_IP_ADDRESS/32"
+  my_ip_with_cidr = "YOUR_OWN_IP_ADDRESS/32"
   public_key      = "ssh-rsa YOUR PUBLIC KEY"
   instance_type   = "t2.micro"
   server_name     = "Apache Example Server"
