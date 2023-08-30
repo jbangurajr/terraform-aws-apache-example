@@ -68,14 +68,14 @@ data "aws_ami" "amazon-linux-2" {
   }
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*-x86_64-ebs"]
+    values = ["amzn2-ami-hvm-*"]
   }
 }
 
 resource "aws_instance" "my_server" {
   ami                         = "${data.aws_ami.amazon-linux-2.id}}"
   instance_type               = var.instance_type
-  subnet_id                   = "subnet-06bf3cdb609f77eee"
+  subnet_id                   = var.subnet_id
   associate_public_ip_address = true
   key_name                    = aws_key_pair.deployer.key_name
   vpc_security_group_ids      = [aws_security_group.sg_my_server.id]

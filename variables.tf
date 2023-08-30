@@ -3,6 +3,12 @@ variable "vpc_id" {
 
 }
 
+variable "subnet_id" {
+  type = string
+
+}
+  
+
 variable "my_ip_with_cidr" {
   type        = string
   description = "Provide your IP eg, 104.194.51.113/32"
